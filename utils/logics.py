@@ -31,6 +31,8 @@ def hitung_service(sub_total: int) -> int:
 
     returns (int):
         Berupa harga biaya service restoran.
+        akan tetapi restoran tidak menerima anga recehan.
+        sehingga biaya service yang decimal akan dibulatkan keatas menggunakan fungsi ceil
     """
     ...
 

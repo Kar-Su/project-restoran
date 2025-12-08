@@ -1,4 +1,3 @@
-import pytest
 
 from utils import *
 
@@ -9,6 +8,6 @@ biaya_service: float = 0.05
 def test_hitung_service():
     sub_total: int = 100_000
 
-    assert hitung_service(sub_total) == pytest.approx(
-        sub_total * biaya_service
+    assert (
+        hitung_service(sub_total) == 5_000
     ), "Hitung Service merupakan berapa persennya sub total"

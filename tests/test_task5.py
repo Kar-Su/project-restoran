@@ -15,6 +15,6 @@ def test_informasi_struk(items: list[PesanItem]):
     struk = buat_struk("Huda", 1, 100_000, items)
 
     assert "Huda" in struk, "nama pelanggan tidak ada"
-    assert "50_000" in struk, "total harga tidak ada"
+    assert "100_000" in struk, "total harga tidak ada"
     assert "Nasi Goreng" in struk, "nama makanan tidak ada"
     assert "Matcha" in struk, "nama minuman tidak ada"
