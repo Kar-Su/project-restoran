@@ -5,7 +5,7 @@ from .logics import (
     hitung_pesanan,
     hitung_service,
 )
-from .models import Bill, InformasiPesanan, PesanItem
+from .models import InformasiPesanan, PesanItem
 
 __all__ = [
     "buat_struk",
@@ -13,7 +13,6 @@ __all__ = [
     "hitung_service",
     "hitung_pesanan",
     "hitung_pajak",
-    "Bill",
     "InformasiPesanan",
     "PesanItem",
 ]

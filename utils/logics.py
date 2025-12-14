@@ -53,7 +53,12 @@ def hitung_diskon(sub_total: int, member: bool) -> int:
         akan tetapi restoran tidak menerima angka recehan.
         Sehingga diskon angka decimal akan dibulatkan kebawah menggunakan fungsi 'floor'.
     """
-    ...
+    diskon = 0
+    if member:
+        diskon += sub_total * 0.10
+    if sub_total >= 300_000:
+        diskon += sub_total * 0.05
+    return math.floor(diskon)
 
 
 def hitung_pajak(sub_total: int, biaya_service: int) -> int:
@@ -87,4 +92,16 @@ def buat_struk(
     returns (str):
         Berupa string dari struk.
     """
-    ...
+    garis = "=" * 30
+    teks = f"\n{garis}\nRESTORAN KELOMPOK 2\n{garis}\n"
+    teks += f"Meja : {meja}\n"
+    teks += f"Nama : {nama_pelanggan}\n"
+    teks += "-" * 30 + "\n"
+
+    for item in pesanan:
+        teks += f"{item.nama} (x{item.jumlah})\n"
+
+    teks += "-" * 30 + "\n"
+    teks += f"TOTAL BAYAR: Rp {total:,}\n"
+    teks += f"{garis}\nTerima Kasih!\n"
+    return teks
