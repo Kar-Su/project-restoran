@@ -1,5 +1,5 @@
+import math
 from utils.models import PesanItem
-
 
 def hitung_pesanan(pesanan: list[PesanItem]) -> int:
     """Task 1
@@ -19,21 +19,9 @@ def hitung_pesanan(pesanan: list[PesanItem]) -> int:
 
 
 def hitung_service(sub_total: int) -> int:
-    """Task 2
-    fungsi hitung_service
-
-    details:
-        Sebuah fungsi untuk menghitung biaya service restoran.
-        perhitungan biaya service adalah 5% dari sub total pelanggan.
-
-    params:
-        sub_total(int): Merupakan sub total (harga sebelum service, diskon, pajak) dari pelanggan.
-
-    returns (int):
-        Berupa harga biaya service restoran.
-        akan tetapi restoran tidak menerima anga recehan.
-        sehingga biaya service yang decimal akan dibulatkan keatas menggunakan fungsi ceil
-    """
+    biaya_service = sub_total * 0.05
+    biaya_service_bulat = math.ceil(biaya_service)
+    return biaya_service_bulat
     ...
 
 
