@@ -21,14 +21,6 @@ def hitung_pesanan(pesanan: list[PesanItem]) -> int:
     
     return total
 
-    
-    
-     
-        
-
-    
-    
-
 
 def hitung_service(sub_total: int) -> int:
     biaya_service = sub_total * 0.05
