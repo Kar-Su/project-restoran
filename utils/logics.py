@@ -57,23 +57,9 @@ def hitung_diskon(sub_total: int, member: bool) -> int:
 
 
 def hitung_pajak(sub_total: int, biaya_service: int) -> int:
-    """Task 4
-    fungi hitung_pajak
-
-    details:
-        Sebuah fungsi untuk menghitung pajak yang harus dibayarkan pelanggan.
-        Pajak dihitung berdasarkan 10% dari sub total ditambah biaya service
-
-    params:
-        sub_total(int): Merupakan sub total (harga sebelum service, diskon, pajak) dari pelanggan.
-        biaya_service(int): Merupakan biaya service restoran.
-
-    returns (int):
-        Berupa pajak yang harus dibayar oleh pelanggan
-        akan tetapi pemerintah juga tidak menerima angka recehan
-        berdasarkan regulasi, angka decimal akan dibulatkan keatas menggunakan fungsi 'ceil'
-    """
-    ...
+    biaya_pajak = (sub_total + biaya_service) * 0.10
+    total_pajak = math.ceil(biaya_pajak)
+    return total_pajak
 
 
 def buat_struk(
