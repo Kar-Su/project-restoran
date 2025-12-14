@@ -16,14 +16,6 @@ class InformasiPesanan(BaseModel):
     member: bool = False
 
 
-class Bill(BaseModel):
-    biaya_service: int
-    diskon: int
-    pajak: int
-    sub_total: int
-    total: int
-
-
 if __name__ == "__main__":
     pesan = PesanItem(nama="Nasi Goreng", harga=12_000, jumlah=10, kategori="makanan")
     list_pesanan = [
