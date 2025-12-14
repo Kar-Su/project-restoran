@@ -31,4 +31,4 @@ if __name__ == "__main__":
         PesanItem(nama="Matcha", harga=10_000, jumlah=5, kategori="minuman"),
     ]
 
-    print(list_pesanan[1].nama)
+    

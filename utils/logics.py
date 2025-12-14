@@ -15,6 +15,18 @@ def hitung_pesanan(pesanan: list[PesanItem]) -> int:
         Berupa integer total harga pesanan pelanggan
 
     """
+    total = 0;
+    for item in pesanan:
+        total += item.harga*item.jumlah
+    
+    return total
+
+    
+    
+     
+        
+
+    
     
 
 
