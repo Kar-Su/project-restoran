@@ -15,14 +15,14 @@ def hitung_pesanan(pesanan: list[PesanItem]) -> int:
         Berupa integer total harga pesanan pelanggan
 
     """
-    ...
+    
 
 
 def hitung_service(sub_total: int) -> int:
     biaya_service = sub_total * 0.05
     biaya_service_bulat = math.ceil(biaya_service)
     return biaya_service_bulat
-    ...
+    
 
 
 def hitung_diskon(sub_total: int, member: bool) -> int:
