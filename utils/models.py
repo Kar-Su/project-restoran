@@ -11,7 +11,6 @@ class PesanItem(BaseModel):
 
 
 class InformasiPesanan(BaseModel):
-    nomor_meja: PositiveInt
     nama_pelanggan: str
     member: bool = False
     items: list[PesanItem]

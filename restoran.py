@@ -82,9 +82,9 @@ class Restoran:
 
     def proses_pesanan(self):
         try:
-            raw_data = self.pesan()
+            data = self.pesan()
             with console.status("[bold green]Sedang memvalidasi pesanan ke dapur...[/bold green]", spinner="dots"):
-                pesanan_valid = InformasiPesanan(**raw_data)
+                pesanan_valid = InformasiPesanan(**data)
                 time.sleep(2) # Simulasi delay jaringan/proses
             
             console.print("[bold blue]Pesanan Terkonfirmasi![/bold blue] \u2713")
@@ -107,18 +107,18 @@ class Restoran:
                 elif "Diskon" in step:
                     diskon = hitung_diskon(subtotal, pesanan_valid.member)
             
-            grand_total = (subtotal + service + pajak) - diskon
+            total = (subtotal + service + pajak) - diskon
 
-            teks_struk_dari_teman = buat_struk(
+            generate_struk = buat_struk(
                 nama_pelanggan=pesanan_valid.nama_pelanggan,
                 meja=99,
-                total=grand_total,
+                total=total,
                 pesanan=pesanan_valid.items
             )
             
             console.clear()
             console.print(Panel(
-                teks_struk_dari_teman, 
+                generate_struk, 
                 title="[bold yellow]STRUK PEMBAYARAN[/bold yellow]", 
                 subtitle="Terima Kasih",
                 style="white on black",
