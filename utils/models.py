@@ -22,5 +22,3 @@ if __name__ == "__main__":
         pesan,
         PesanItem(nama="Matcha", harga=10_000, jumlah=5, kategori="minuman"),
     ]
-
-    

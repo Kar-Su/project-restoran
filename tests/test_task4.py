@@ -1,6 +1,5 @@
 from math import ceil
 
-
 from utils import *
 
 # pajak diganti sesuai dengan ketentuan yang dibuat dalam fungsi

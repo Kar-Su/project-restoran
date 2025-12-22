@@ -4,6 +4,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.prompt import Prompt, IntPrompt, Confirm
 from rich.progress import track
+from random import randint
 
 from utils import *
 
@@ -97,7 +98,7 @@ class Restoran:
             diskon = 0
             
             for step in track(steps, description="Processing..."):
-                time.sleep(0.5) # Simulasi proses berat
+                time.sleep(0.5)
                 if "Subtotal" in step:
                     subtotal = hitung_pesanan(pesanan_valid.items)
                 elif "Service" in step:
@@ -111,7 +112,7 @@ class Restoran:
 
             generate_struk = buat_struk(
                 nama_pelanggan=pesanan_valid.nama_pelanggan,
-                meja=99,
+                meja=randint(1,20),
                 total=total,
                 pesanan=pesanan_valid.items
             )
@@ -120,7 +121,7 @@ class Restoran:
             console.print(Panel(
                 generate_struk, 
                 title="[bold yellow]STRUK PEMBAYARAN[/bold yellow]", 
-                subtitle="Terima Kasih",
+                subtitle="KELOMPOK 2",
                 style="white on black",
                 expand=False
             ))
